@@ -1,0 +1,126 @@
+/* 1. General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f9; /* Light background color */
+  /* You can uncomment this and set your own background image */
+  /*
+  background-image: url('../assets/image/background.jpg');
+  background-size: cover;
+  background-position: center;
+  */
+  padding: 20px;
+}
+
+/* 2. Navigation Menu - Horizontal layout with hover effects */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #222;
+  padding: 15px 0;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #444;
+  color: #00ff00; /* gold hover */
+}
+
+/* 4. Profile Image - Circular and styled */
+img[alt="My Photo"] {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* display: block; */
+  margin: 20px auto;
+  
+}
+
+/* 5. Skills Section styled with custom bullets/icons */
+#skills {
+  background-color: #fff;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+}
+
+#skills h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+#skills ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#skills ul li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  font-size: 1.1em;
+}
+
+#skills ul li::before {
+  content: "💻"; /* example icon (you can change to any emoji or image) */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* 6. Headings and Paragraphs */
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+h2, h3, h4, h5, h6 {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+p {
+  margin-bottom: 15px;
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Optional: Responsive adjustments */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #skills {
+    width: 95%;
+  }
+
+  img[alt="My Photo"] {
+    width: 150px;
+    height: 150px;
+  }
+}

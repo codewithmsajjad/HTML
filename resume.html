@@ -7,7 +7,9 @@
     <meta name="description" content="Resume page of John Doe showcasing education, experience, and skills." />
     <title>Resume | John Doe</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <
 </head>
+
 
 <body>
     <nav>
@@ -55,10 +57,44 @@
 
         <section>
             <h2>Download Resume</h2>
-            <p><a href="resume.pdf" download>Click here to download my resume (PDF)</a></p>
+            <a href="#" onclick="generatePDF()" class="download-link">
+    Download My Resume (PDF)
+</a>
         </section>
     </main>
 
-</body>
 
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+    function generatePDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        // Add content to the PDF
+        doc.setFontSize(22);
+        doc.text("Muhammad Sajjad", 20, 20);
+
+        doc.setFontSize(16);
+        doc.text("Education & Experience", 20, 40);
+
+        doc.setFontSize(12);
+        doc.text("Education:", 20, 50);
+        doc.text("2nd Year in Computer Science", 30, 60);
+        doc.text("Peshawar Cambridge Degree College, 2024", 30, 70);
+
+        doc.text("Experience:", 20, 90);
+        doc.text("Frontend Developer Intern", 30, 100);
+        doc.text("Created responsive websites using HTML, CSS, and Bootstrap", 30, 110);
+
+        doc.text("Skills:", 20, 130);
+        doc.text("- HTML5 & CSS3", 30, 140);
+        doc.text("- Bootstrap Framework", 30, 150);
+        doc.text("- Responsive Web Design", 30, 160);
+        doc.text("- Basic JavaScript", 30, 170);
+
+        // Save the PDF
+        doc.save("Muhammad_Sajjad_Resume.pdf");
+    }
+</script>
 </html>
