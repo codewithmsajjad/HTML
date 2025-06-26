@@ -1,64 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <title>Contact Page</title>
 </head>
-
 <body>
   <!-- Navigation Menu -->
   <nav>
     <a href="index.html">Home</a>
-    <a href="index.html#skills">Skills</a>
     <a href="about.html">About Me</a>
     <a href="portfolio.html">Portfolio Page</a>
     <a href="blog.html">Blog Page</a>
     <a href="contact.html">Contact Page</a>
     <a href="resume.html">Resume Page</a>
-
   </nav>
-  <h1>Contact Me</h1>
-
-  <form>
-    <!-- Name -->
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" placeholder="Enter Your Name" required><br><br>
-
-    <!-- Subject -->
-    <label for="subject">Subject:</label><br>
-    <input type="text" id="subject" name="subject" placeholder="Enter Your Subject" required><br><br>
-
-    <!-- Email -->
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" placeholder="Enter Your Email" required><br><br>
-
-    <!-- Message -->
-    <label>Message:</label><br>
-    <textarea name="message" rows="5" cols="40" placeholder="Enter your massege.." required></textarea><br><br>
-
-    <!-- Radio Buttons -->
-    <p>How did you hear about me?</p>
-    <input type="radio" id="friend" name="Friend" value="Friend">
-    <label for="friend">Friend</label><br>
-
-    <input type="radio" id="social" name="Social" value="Social Media">
-    <label for="social">Social Media</label><br><br>
-
-    <!-- Checkbox -->
-    <input type="checkbox" id="subscribe" name="Subscribe">
-    <label for="subscribe">Subscribe to newsletter</label><br><br>
-
-    <!-- Buttons -->
-    <input type="submit" value="Submit">
-    <input type="reset" value="Reset">
-  </form>
 
 
+  <!-- Container -->
+  <div class="container">
+    <div class="row">
+  
 
+      <!-- Right Column: Form -->
+      <div class="col-6">
+  <h1><span>Co</span>ntact Me</h1>
 
+        <div class="contact-form">
+          <form>
+            <div class="form-group">
+             
+                 <!-- Name -->
+                   <label for="name">Name: <span>*</span></label>
+          <input type="name" id="name" name="name" placeholder="Enter Your Name" required>
+      
+            </div>
+            <div class="form-group">
+              <!-- Email -->
+              <label for="email">Email: <span>*</span></label>
+              <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+         
+            </div>
+            <div class="form-group">
+              <!-- Email -->
+              <label for="subject">Subject: <span>*</span></label>
+              <input type="subject" id="subject" name="subject" placeholder="Enter Your Subject" required>
+         
+            </div>
+            <div class="form-group">
+              <label>Message: <span>*</span></label>
+              <textarea name="message" rows="5" placeholder="Enter your message.." required></textarea>
+            </div>
+            <button type="submit">SUBMIT</button><br><br>
+            <button type="reset">RESET</button>
+          </form>
+        </div>
+      </div>
 
+    <!-- Left Column: Image -->
+      <div class="col-6">
+        <img src="./assets/image/Contact us-pana.png" alt="Contact Image" class="contact-image">
+      </div>
+
+    </div>
+  </div>
 </body>
-
 </html>
+
+
